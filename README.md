@@ -1,2 +1,2 @@
 # DATAProject
-Proyecto MinTIC - Universida del Bosque (Ciclo3)
+Proyecto MinTIC - Universidad del Bosque (Ciclo3)

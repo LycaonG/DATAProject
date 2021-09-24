@@ -54,6 +54,9 @@ En proceso...
 
 ## Autores ✒️
 
+* **María José Tatiana Cubillos Rios** -**- [MariaJoseCubillos](#MariaJoseCubillos)
+* **Liliana Rodríguez** -**- [LilianaRodriguez87](#LilianaRodriguez87)
+* **Oscar Chalial Meza** -**- [chalialmeza](#chalialmeza)
 * **Andrés Mauricio Moreno Garavito** - *Back-end* - [LycaonG](#LycaonG)
 
 Contribuyentes [contribuyentes]

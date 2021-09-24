@@ -30,7 +30,7 @@ Se utiliza la aplicacion Trello para la organización del proyecto.
 Link del projecto: 
 
 ```
-https://trello.com
+https://trello.com/b/ss4aryBM
 ```
 
 Gestión del repositorio.

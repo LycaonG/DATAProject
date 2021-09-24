@@ -69,5 +69,5 @@ En proceso...
 * Un café ☕ siempre es bien recibido. 
 * Gracias a todos los colaboradores, a la Universidad del Bosque y a MinTIC.
 * Gracias totales.
-* - LycaonG -.
+* - LycaonG -..
 

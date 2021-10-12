@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta charset="UTF-8">
+      <title>Buscar Usuario</title>
+      
+
+      <!-- Bootstrap CSS 
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">-->
+
+      <!--Fontawesome CDN
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+
+	<!--Custom styles
+    <link href="../static/css/styles.css" rel="stylesheet" th:href="@{/css/styles.css}">-->
+	
+
+  </head>
+  
+  <body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Buscar Usuario</h3>
+                </div> 
+                <div class="card-body">
+                    <form method="POST" th:action="@{/validarB}"> 
+                        <div class="input-group form-group">
+                            <input name="cedula" type="text" class="form-control" placeholder="Cedula">
+                        </div>
+                         <!-- <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>-->
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" value="Buscar" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                    <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  </body>
+</html>

@@ -1,0 +1,37 @@
+Proyecto - DATAProject ciclo3 - Andrés Mauricio Moreno Garavito
+Indicaciones
+
+Usar puerto 8082
+La base de datos va adjunta - tiendaDB
+
+Usos:
+
+Área de gestión:
+
+Gestion de usuarios: editar, eliminar agregar.
+Listar usuarios.
+Buscar usuario.
+
+Gestion de clientes: editar, eliminar agregar.
+Listar clientes.
+Buscar clientes.
+
+Gestion de proveedores: editar, eliminar agregar.
+Listar proveedores.
+Buscar proveedores.
+
+Para ingresar al área de gestión utilizar:
+Usuario: admin
+Contraseña: admin
+
+Ingreso de clientes y proveedores:
+
+Para ingresar al área de clientes:
+Usuario: cliente1
+Contraseña: cliente1
+
+Para ingresar al área de proveedores:
+Usuario: prov1
+Contraseña: prov1
+
+

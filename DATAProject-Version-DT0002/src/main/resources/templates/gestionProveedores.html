@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion de proveedores</title>
+    <!-- Bootstrap CSS-->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>       
+    <div class="container">
+        <!-- <h1 th:text="'Hola, ' + ${usuario.nombreCompleto} + '!'"></h1> -->
+        <h2 th:if="${listaProveedores.isEmpty()}">
+            No hay Proveedores que Gestionar</h2>
+        <div th:if="${!listaProveedores.isEmpty()}">
+            <h2> Gestión de Proveedores</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Razón Social</th>
+                        <th>Nit</th>
+                        <th>Correo Electronico</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuarioItem : ${listaProveedores}">
+                        <td th:text="${usuarioItem.razonSocial}">
+                        <td th:text="${usuarioItem.nit}">
+                        <td th:text="${usuarioItem.correo}">
+                        <td th:text="${usuarioItem.direccion}">
+                        <td th:text="${usuarioItem.telefono}">
+                        <td><a class="btn btn-info" th:href="@{/editarP/{id}(id=${usuarioItem.id})}">Editar</a></td>
+                        <td><a class="btn btn-danger" th:href="@{/eliminarP/{id}(id=${usuarioItem.id})}">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/agregarP/0" class="btn btn-primary">Agregar Nuevo Proveedor</a>
+        </div>
+    </div>
+    <div>
+     <br>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br><br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+</body>
+
+</html>

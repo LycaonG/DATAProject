@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+</script>
+<head>
+<meta charset="UTF-8">
+<title>Home de Gestión</title>
+<script>
+$(document).ready(function() {
+
+	//When page loads...
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+
+	//On Click Event
+	$("ul.tabs li").click(function() {
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+});
+</script>
+
+<!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+      <!--Fontawesome CDN -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!--integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"-->
+
+	<!--Custom styles>-->
+    <link href="../static/css/styles.css" rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+ <header> <div class="container justify-content-center">
+
+<!-- <h1 th:text="'Bienvenido, ' + ${usuario.nombreCompleto} + '!'"></h1> -->
+<h1>Seleccione el área a gestionar</h1>
+ </div>
+  </header>
+  
+  <body>
+<ul class="tabs">
+     <li><a href="#tab1">Usuarios</a></li>
+     <li><a href="#tab2">Clientes</a></li>
+     <li><a href="#tab3">Proveedores</a></li>
+     <li><a href="#tab4">Inventario</a></li>
+     <li><a href="#tab5">Modulo_compras</a></li>
+     <li><a href="#tab6">Modulo_ventas</a></li>
+</ul>
+<div class="tab_container">
+    <div class="tab_content" id="tab1" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Gestión de usuarios</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarUsuarios" class="btn btn-primary center">Listar usuarios</a></h2>
+<br>
+<h2><a href="/gestionU" class="btn btn-primary center">Gestionar usuarios</a></h2>
+<br>
+<h2><a href="/buscar" class="btn btn-primary center">Buscar usuario</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+         </div>
+    </div>
+ </div>
+ </div>
+ 
+ 
+<div class="tab_container">
+    <div class="tab_content" id="tab2" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Gestión de clientes</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarClientes" class="btn btn-primary">Listar clientes</a></h2>
+<br>
+<h2><a href="/gestionC" class="btn btn-primary">Gestionar clientes</a></h2>
+<br>
+<h2><a href="/buscarC" class="btn btn-primary">Buscar cliente</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+  </div>
+    </div>
+ </div>
+  </div>
+ 
+<div class="tab_container">
+    <div class="tab_content" id="tab3" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Gestión de proveedores</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarProveedores" class="btn btn-primary">Listar proveedores</a></h2>
+<br>
+<h2><a href="/gestionP" class="btn btn-primary">Gestionar proveedores</a></h2>
+<br>
+<h2><a href="/buscarP" class="btn btn-primary">Buscar proveedor</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+ </div>
+    </div>
+ </div>
+ </div>
+ 
+<div class="tab_container">
+    <div class="tab_content" id="tab4" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Inventario</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarProductos" class="btn btn-primary">Listar productos</a></h2>
+<br>
+<h2><a href="/gestionProd" class="btn btn-primary">Gestionar productos</a></h2>
+<br>
+<h2><a href="/buscarProd" class="btn btn-primary">Buscar productos</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+ </div>
+    </div>
+ </div>
+ </div> 
+ <div class="tab_container">
+    <div class="tab_content" id="tab5" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Modulo de compras</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarCompras" class="btn btn-primary">Lista de Compras</a></h2>
+<br>
+<h2><a href="/gestionCompras" class="btn btn-primary">Gestionar cuentas de cobro</a></h2>
+<br>
+<h2><a href="/buscarcompra" class="btn btn-primary">Buscar cuentas de cobro</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+ </div>
+    </div>
+ </div>
+ </div>
+ <div class="tab_container">
+    <div class="tab_content" id="tab6" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Modulo de ventas</h4>
+                </div> 
+                <div class="card-body">
+<h2><a href="/listarVentas" class="btn btn-primary">Lista de Ventas</a></h2>
+<br>
+<h2><a href="/gestionVentas" class="btn btn-primary">Gestionar facturas de venta</a></h2>
+<br>
+<h2><a href="/buscarventa" class="btn btn-primary">Buscar factura de venta</a></h2>
+
+<div>
+<br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+ </div>
+ </div>
+    </div>
+ </div>
+ </div>
+ 
+      <h2><a href="/login" class="btn btn-primary">Regresar</a></h2>  
+</body>
+<footer>
+  <br>
+   <h6>Copyright - Equipo6 - Grupo 39 - Proyecto MinTIC - Universidad del Bosque</h6>
+   <br>
+  </footer>
+</html>

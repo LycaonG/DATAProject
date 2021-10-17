@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Proveedor</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Editar proveedor</h2>
+        <form action="#" th:action="@{/administracionP}" th:object="${proveedor}" method="post">
+            <div class="form-group">
+                <label for="nombre">Razón Social</label> <input type="text" class="form-control" id="razonSocial"
+                    th:field="*{razonSocial}" name="razonSocial">
+            </div>
+            <input type="hidden" th:field="*{id}" name="id" id="id">
+            <div class="form-group">
+                <label for="nombre">Nit</label> <input type="text" class="form-control" id="nit"
+                    th:field="*{nit}" name="nit">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Correo Electronico</label> <input type="text" class="form-control" id="correo"
+                    th:field="*{correo}" name="correo">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Dirección</label> <input type="text" class="form-control" id="direccion"
+                    th:field="*{direccion}" name="direccion">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Telefono</label> <input type="text" class="form-control" id="telefono"
+                    th:field="*{telefono}" name="telefono">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Usuario</label> <input type="text" class="form-control" id="usuariop"
+                    th:field="*{usuariop}" name="usuarioc">
+            </div>
+             <div class="form-group">
+                <label for="nombre">Password</label> <input type="text" class="form-control" id="passwordp"
+                    th:field="*{passwordp}" name="passwordc">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+    <div>
+    <br>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+</body>
+
+</html>

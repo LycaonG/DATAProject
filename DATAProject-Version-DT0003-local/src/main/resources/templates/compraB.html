@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de compras a proveedores</title>
+    <!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>       
+    
+    <div class="container">
+       
+        <br>
+        <div>
+            <h2>Registro Encontrado</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                    	<th>Cuenta de cobro N°</th>
+                    	<th>Fecha de compra</th>
+                    	<th>Producto</th>
+                        <th>Razón Social</th>
+                        <th>Nit</th>
+                        <th>Valor Unitario</th>                        
+                        <th>Cantidad</th>
+                        <th>Valor Total</th>
+                        <th>Estado de la cuenta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="compraItem : ${compraB}">
+                        <td th:text="${compraItem.N_cuentadecobro}">
+                        <td th:text="${compraItem.fechaCompra}">
+                        <td th:text="${compraItem.producto}">
+                        <td th:text="${compraItem.razonSocial}">
+                        <td th:text="${compraItem.nit}">
+                        <td th:text="${compraItem.vUnitario}">
+                        <td th:text="${compraItem.cantidadc}">
+                        <td th:text="${compraItem.vTotal}">
+                        <td th:text="${compraItem.estado}">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br><br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+</body>
+
+</html>

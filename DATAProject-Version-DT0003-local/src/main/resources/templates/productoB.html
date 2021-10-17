@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de productos</title>
+    <!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>       
+    
+    <div class="container">
+       
+        <br>
+        <div>
+            <h2>Producto Encontrado</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                    	<th>Codigo</th>
+                    	<th>Producto</th>
+                        <th>Razón Social</th>                        
+                        <th>Cantidad</th>
+                        <th>Valor Unitario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="productoItem : ${productoB}">
+                        <td th:text="${productoItem.codigo}">
+                        <td th:text="${productoItem.producto}">
+                        <td th:text="${productoItem.razonSocial}">
+                        <td th:text="${productoItem.cantidad}">
+                        <td th:text="${productoItem.vUnitario}">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br><br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+</body>
+
+</html>

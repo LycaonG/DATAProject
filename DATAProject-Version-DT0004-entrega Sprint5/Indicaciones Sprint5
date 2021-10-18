@@ -1,0 +1,35 @@
+Proyecto - DATAProject ciclo3 - Andrés Mauricio Moreno Garavito
+Indicaciones
+
+NOTA INICIAL: LA BASE DE DATOS EN LA NUBE tiendagenericamaoe2 ESTÁ GENERANDO ERROR POR DEMASIADAS CONEXIONES
+ESO SE PUEDE SOLUCIONAR CONFIGURANDO LA BASE D EDATOS EN LA NUBE.
+________________________________________________________________________________________________
+
+Para conexion local Usar puerto 8082
+Tambien para Swagger: http://localhost:8082/swagger-ui.html#
+
+La base de datos va adjunta - tiendaDB
+esta base de datos en de prueba, la original se encuentra en: tiendagenericamaoe2.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/grupo39_equipo6
+
+1. Se abrirá una pagina html inicial index.
+2. Se debe dar click en el menú ZONA DE ADMINISTRACIÓN en la parte superios derecha
+
+3. Para ingresar al área de gestión utilizar:
+Usuario: admin
+Contraseña: admin
+
+________________________________________________________________________________________________
+
+
+Para conexión en la NUBE modificar el application.properties.
+
+
+________________________________________________________________________________________________
+
+link TRELLO: https://trello.com/invite/b/ss4aryBM/e5ae631e98af3fe2018fc923b6cfee05/dataproject
+
+link GITHUB: https://github.com/LycaonG/DATAProject
+
+AWS
+
+NOMBRE DE LA INSTANCIA: serverWindows-grupo39-equipo6

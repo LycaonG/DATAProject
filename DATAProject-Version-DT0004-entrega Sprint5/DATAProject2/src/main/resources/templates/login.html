@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+</script>
+  <head>
+      <meta charset="UTF-8">
+      <title>Login DATAProject</title>
+<script>
+$(document).ready(function() {
+
+	//When page loads...
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+
+	//On Click Event
+	$("ul.tabs li").click(function() {
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+});
+</script>
+
+<!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+      <!--Fontawesome CDN -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!--integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"-->
+
+	<!--Custom styles>-->
+    <link href="../static/css/styles.css" rel="stylesheet" th:href="@{/css/styles.css}">
+	
+
+  </head>
+  <header> <div class="container justify-content-center">
+  <h2>Bienvenido a la plataforma de gestión de DATAProject</h2>
+  <h5>Seleccione su área de servicio y digite nombre de usuario y contraseña para ingresar</h5>
+  </div>
+  </header>
+  
+  <body>
+ 
+  <ul class="tabs">
+     <li><a href="#tab1">Administración</a></li>
+     <!-- <li><a href="#tab2">Clientes</a></li> -->
+      <!-- <li><a href="#tab3">Proveedores</a></li> -->
+</ul>
+<div class="tab_container">
+    <div class="tab_content" id="tab1" >
+     <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Iniciar sesión Administrador</h4>
+                </div> 
+                <div class="card-body">
+                    <form method="POST" th:action="@{/validar}"> 
+                        <div class="input-group form-group">
+                            <input name="username" type="text" class="form-control" placeholder="Usuario">
+                        </div>
+                        <br><br>
+                        <div class="input-group form-group">
+                            <input name="password" type="password" class="form-control" placeholder="Contraseña">
+                        </div>
+                        <br><br>
+                         <!-- <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>-->
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" value="Ingresar" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+       </div>
+            
+   <div>
+   
+<br>
+            <h2><a href="/" class="btn btn-primary">Regresar</a></h2>
+   
+        </div>
+
+  
+  </body>
+  <footer>
+  <br>
+   <h6>Copyright - Equipo6 - Grupo 39 - Proyecto MinTIC - Universidad del Bosque</h6>
+   <br>
+  </footer>
+</html>

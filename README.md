@@ -54,9 +54,7 @@ En proceso...
 
 ## Autores ✒️
 
-* **María José Tatiana Cubillos Rios** -*FrontEnd*- [MariaJoseCubillos](#MariaJoseCubillos)
-* **Liliana Rodríguez** -*Front-End*- [LilianaRodriguez87](#LilianaRodriguez87)
-* **Andrés Mauricio Moreno Garavito** - *Back-End* - [LycaonG](#LycaonG)
+* **Andrés Mauricio Moreno Garavito** - *Back-End - Front-End* - [LycaonG](#LycaonG)
 
 Contribuyentes [contribuyentes]
 

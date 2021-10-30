@@ -1,4 +1,4 @@
-# Getting Started-2222222
+# Getting Started
 
 ### Reference Documentation
 For further reference, please consider the following sections:

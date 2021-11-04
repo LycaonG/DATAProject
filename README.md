@@ -33,8 +33,7 @@ Link del projecto:
 https://trello.com/b/ss4aryBM
 ```
 
-Gestión del repositorio.
-
+Gesti
 ```
 * Utilizar ramas para evitar modificaciones innecesarias.
 * Utilizar GitHub Desktop.

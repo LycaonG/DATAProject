@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Agregar producto</h2>
+        <form action="#" th:action="@{/administracionProd}" th:object="${producto}" method="post">
+            <div class="form-group">
+                <label for="nombre">Producto</label> <input type="text" class="form-control" id="producto"
+                    th:field="*{producto}" name="producto">
+            </div>
+            <input type="hidden" th:field="*{codigo}" name="codigo" id="codigo">
+            <div class="form-group">
+                <label for="nombre">Razón Social-proveedor</label> <input type="text" class="form-control" id="razonSocial"
+                    th:field="*{razonSocial}" name="razonSocial">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Cantidad</label> <input type="text" class="form-control" id="cantidad"
+                    th:field="*{cantidad}" name="cantidad">
+            </div>
+             <div class="form-group">
+                <label for="nombre">Valor Unitario</label> <input type="text" class="form-control" id="vUnitario"
+                    th:field="*{vUnitario}" name="vUnitario">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+    <div>
+    <br>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+</body>
+
+</html>

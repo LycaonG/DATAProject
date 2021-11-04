@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar estado de factura de venta</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Editar estado de factura de venta</h2>
+        <h2>Activa o Anulada</h2>
+        <form action="#" th:action="@{/administracionVentas}" th:object="${venta}" method="post">
+        <div class="form-group">
+                <label for="nombre">Fecha de venta</label> <input type="text" class="form-control" id="fechaVenta"
+                    th:field="*{fechaVenta}" name="fechaVenta" readonly>
+            </div>
+            <input type="hidden" th:field="*{N_factura}" name="N_factura" id="N_factura">
+            <div class="form-group">
+                <label for="nombre">Nombre</label> <input type="text" class="form-control" id="nombreCompleto"
+                    th:field="*{nombreCompleto}" name="nombreCompleto" readonly>
+            </div>
+             <div class="form-group">
+                <label for="nombre">Cedula</label> <input type="text" class="form-control" id="cedula"
+                    th:field="*{cedula}" name="cedula" readonly>
+            </div>
+             <div class="form-group">
+                <label for="nombre">Correo</label> <input type="text" class="form-control" id="correo"
+                    th:field="*{correo}" name="correo" readonly>
+            </div>
+             <div class="form-group">
+                <label for="nombre">Dirección</label> <input type="text" class="form-control" id="direccion"
+                    th:field="*{direccion}" name="direccion" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Teléfono</label> <input type="text" class="form-control" id="telefono"
+                    th:field="*{telefono}" name="telefono" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Producto</label> <input type="text" class="form-control" id="producto"
+                    th:field="*{producto}" name="producto" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Cantidad</label> <input type="text" class="form-control" id="cantidadv"
+                    th:field="*{cantidadv}" name="cantidadv" readonly>
+            </div>
+             <div class="form-group">
+                <label for="nombre">Valor Unitario</label> <input type="text" class="form-control" id="vUnitario"
+                    th:field="*{vUnitario}" name="vUnitario" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Impuesto</label> <input type="text" class="form-control" id="impuesto"
+                    th:field="*{impuesto}" name="impuesto" readonly>
+            </div>
+             <div class="form-group">
+                <label for="nombre">Valor Total</label> <input type="text" class="form-control" id="vTotalv"
+                    th:field="*{vTotalv}" name="vTotalv" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Estado de factura</label> <input type="text" class="form-control" id="estadov"
+                    th:field="*{estadov}" name="estadov">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+    <div>
+    <br>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+</body>
+
+</html>

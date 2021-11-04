@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Nueva Compra</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h2>Agregar nueva compra a proveedor</h2>
+        <form action="#" th:action="@{/administracionCompras}" th:object="${compra}" method="post">
+            <div class="form-group">
+                <label for="nombre">Fecha de compra</label> <input type="text" class="form-control" id="fechaCompra"
+                    th:field="*{fechaCompra}" name="fechaCompra">
+            </div>
+            <input type="hidden" th:field="*{N_cuentadecobro}" name="N_cuentadecobro" id="N_cuentadecobro">
+            <div class="form-group">
+                <label for="nombre">Razón Social-proveedor</label> <input type="text" class="form-control" id="razonSocial"
+                    th:field="*{razonSocial}" name="razonSocial">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nit</label> <input type="text" class="form-control" id="nit"
+                    th:field="*{nit}" name="nit">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Producto</label> <input type="text" class="form-control" id="producto"
+                    th:field="*{producto}" name="producto">
+            </div>
+             <div class="form-group">
+                <label for="nombre">Valor Unitario</label> <input type="text" class="form-control" id="vUnitario"
+                    th:field="*{vUnitario}" name="vUnitario">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Cantidad</label> <input type="text" class="form-control" id="cantidadc"
+                    th:field="*{cantidadc}" name="cantidadc">
+            </div>
+             <div class="form-group">
+                <label for="nombre">Valor Total</label> <input type="text" class="form-control" id="vTotal"
+                    th:field="*{vTotal}" name="vTotal">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Estado de cuenta de cobro</label> <input type="text" class="form-control" id="estado"
+                    th:field="*{estado}" name="estado">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+    <div>
+    <br>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+</body>
+
+</html>

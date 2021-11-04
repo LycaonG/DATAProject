@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de proveedores</title>
+    <!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>       
+    
+    <div class="container">
+       
+        <br>
+        <div>
+            <h2>Proveedor Encontrado</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Razón Social</th>
+                        <th>Nit</th>
+                        <th>Correo Electronico</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuarioItem : ${proveedorB}">
+                        <td th:text="${usuarioItem.razonSocial}">
+                        <td th:text="${usuarioItem.nit}">
+                        <td th:text="${usuarioItem.correo}">
+                        <td th:text="${usuarioItem.direccion}">
+                        <td th:text="${usuarioItem.telefono}">
+                        <td th:text="${usuarioItem.usuariop}">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+</body>
+
+</html>

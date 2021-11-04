@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de ventas a clientes</title>
+    <!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>       
+    
+    <div class="container">
+       
+        <br>
+        <div>
+            <h2>Registro Encontrado</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                    	<th>Factura N°</th>
+                    	<th>Fecha de venta</th>
+                    	<th>Nombre</th>
+                        <th>Cedula</th>
+                        <th>Correo</th>
+                    	<th>Dirección</th>
+                        <th>Teléfono</th>                   	
+                    	<th>Producto</th>
+                       	<th>Cantidad</th>
+                        <th>Valor Unitario</th>                        
+                        <th>Impuesto</th>
+                        <th>Valor Total</th>
+                        <th>Estado de la factura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="ventaItem : ${ventaB}">
+                        <td th:text="${ventaItem.N_factura}">
+                        <td th:text="${ventaItem.fechaVenta}">
+                        <td th:text="${ventaItem.nombreCompleto}">
+                        <td th:text="${ventaItem.cedula}">
+                        <td th:text="${ventaItem.correo}">
+                        <td th:text="${ventaItem.direccion}">
+                        <td th:text="${ventaItem.telefono}">
+                        <td th:text="${ventaItem.producto}">
+                        <td th:text="${ventaItem.cantidadv}">
+                        <td th:text="${ventaItem.vUnitario}">
+                        <td th:text="${ventaItem.impuesto}">
+                        <td th:text="${ventaItem.vTotalv}">
+                        <td th:text="${ventaItem.estadov}">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br><br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+</body>
+
+</html>

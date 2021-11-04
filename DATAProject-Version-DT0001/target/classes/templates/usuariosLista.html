@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de usuarios</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">-->
+</head>
+
+<body>   
+    
+    
+    <div class="container">
+        <!-- <h1 th:text="'Hola, ' + ${usuario.nombreCompleto} + '!'"></h1> -->
+        <br>
+        <h2 th:if="${listaUsuarios.isEmpty()}">
+            No hay Usuarios que listar</h2>
+        <div th:if="${!listaUsuarios.isEmpty()}">
+            <h2>Lista de Usuarios</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Cedula</th>
+                        <th>Correo Electronico</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuarioItem : ${listaUsuarios}">
+                        <td th:text="${usuarioItem.nombreCompleto}">
+                        <td th:text="${usuarioItem.cedula}">
+                        <td th:text="${usuarioItem.correo}">
+                        <td th:text="${usuarioItem.usuario}">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <a href="/home" class="btn btn-primary">Regresar</a>
+            <br>
+            <h2><a href="/salir" class="btn btn-primary">Salir</a></h2>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
